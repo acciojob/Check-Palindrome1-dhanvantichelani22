@@ -1,18 +1,36 @@
 // complete the given function
 
-function palindrome(str){
-  var palin = str.toLowerCase();
-	let i=0,j=i-1;
-	while(i<j){
-	// palin = str.charAt[i==j]
-		if(palin.charAt(i)==palin.charAt(j)){
-			i++;
-			j--;
-		}else {
-			return false;
-		}
+// function palindrome(str){
+//   var palin = str.toLowerCase();
+// 	let i=0,j=i-1;
+// 	while(i<j){
+// 	// palin = str.charAt[i==j]
+// 		if(palin.charAt(i)==palin.charAt(j)){
+// 			i++;
+// 			j--;
+// 		}else {
+// 			return false;
+// 		}
 		
-	}
-	return true;
+// 	}
+// 	return true;
+// }
+//module.exports = palindrome
+
+
+function palindrome(str){
+str=str.toLowerCase();
+let i=0;
+let j=str.length-1;
+while(i<j){
+if(str.charAt(i)==str.charAt(j)){
+i++;
+j--;
+}else{
+return false;
+}
+}
+return true;
+
 }
 module.exports = palindrome
